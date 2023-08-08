@@ -4,49 +4,22 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
-         /*
-           Syntax:
-          for(initial value;condition;increment)
-          {
-             body or process
-          }
+        int num1 = 0;
+        int num2 = 1;
+        int num3;
+        if (n < 2 ) {
+            System.out.println("your fibonacci number is 0");
+        } else if (n < 3) {
+            System.out.println("your fibonacci number is 1");
+        } else {
+            for (int a = 0; a <= n-1; a++) {
 
-          */
+                num3 = num1 + num2;
+                num1 = num2;
+                num2 = num3;
+            }
+            System.out.println("nth fibonacci number is : " + num1);
 
-
-        for (int num = 1; num < n; num += 2) {
-            System.out.println(num);
         }
-
-       /*
-           Syntax:
-           initial value;
-          while(condition)
-          {
-             body or process;
-             increment;
-          }
-
-           */
-        int num2 = 0;
-        while (num2 < 20) {
-            num2 = num2 + 2;
-            System.out.println(num2);
-        }
-        /*
-           Syntax:
-           initial value;
-          do{
-              body or process;
-             increment;
-          } while(condition);
-
-           */
-        int c = 0;
-        do {
-            System.out.println("hello");
-            c++;
-        } while (c < 15);
-
     }
 }
