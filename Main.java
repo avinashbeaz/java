@@ -23,6 +23,6 @@ public class Main {
             System.out.println(e);
             System.out.println("do you want to calculate press 0 ,press other key to exit");
             d = in.nextInt();
-        } while(d==05);
+        } while(d==0);
     }
 }
