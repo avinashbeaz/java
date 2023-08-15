@@ -2,27 +2,21 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in =new Scanner(System.in);
-        System.out.println("enter number");
-        int x = in.nextInt();
-        if (x == armStrong(x))
-        {
-            System.out.print("your number is armstrong");
-        }
-        else
-        {
-            System.out.print("your number is not  armstrong");
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter first number");
+        int a = in.nextInt();
+        System.out.println("enter second number");
+        int b = in.nextInt();
+        System.out.println("enter third number");
+        int c = in.nextInt();
+        if (a > b && b > c) {
+            System.out.println(a);
+        } else if(b > a && b>c ){
+            System.out.println(b);
+
+        }else {
+            System.out.println(c);
         }
     }
-
-    private static int armStrong(int x) {
-     int v=0;
-        while (x> 0){
-            int rem = x% 10;
-            v = rem*rem*rem +v;
-            x=x/10;
-        }
-        return v;
-}
 }
 
