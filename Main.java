@@ -1,19 +1,26 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
 
-        int[] arr = {23,34,56,34,65};
-        int target = 34;
-        System.out.println(same(arr,target));
+        String name = in.nextLine();
+        char target = in.next().charAt(0);
+        System.out.println(samechar(name,target));
 
     }
 
- static int same(int[] arr,int target) {
-     int count = 0;
-     for (int element: arr) {
+ static int samechar(String str, int target) {
+        int count =0;
+        if (str.length() ==0) {
+            return count;
+        }
 
-         if (element == target) {
-             count++;
+
+     for (int i =0; i < str.length(); i++) {
+
+         if (target == str.charAt(i)) {
+             count ++;
          }
      }
      return count;
